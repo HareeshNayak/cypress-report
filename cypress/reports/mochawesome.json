@@ -1,0 +1,112 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-09-18T06:06:54.965Z",
+    "end": "2025-09-18T06:06:55.445Z",
+    "duration": 480,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "04872cd8-273b-4235-9667-f4f880dbe8c2",
+      "title": "",
+      "fullFile": "cypress\\e2e\\OrangeHRM_Screenshot.cy.js",
+      "file": "cypress\\e2e\\OrangeHRM_Screenshot.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "00543636-e2f3-4c72-8330-a8eb7de3bede",
+          "title": "OrangeHRM Video Examples",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "completes a full user journey",
+              "fullTitle": "OrangeHRM Video Examples completes a full user journey",
+              "timedOut": null,
+              "duration": 402,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// This entire test will be recorded\ncy.visit('/web/index.php/auth/login');\n// Login\ncy.get('input[name=\"username\"]').type('Admin');\ncy.get('input[name=\"password\"]').type('admin123');\ncy.get('button[type=\"submit\"]').click();\n// Verify dashboard\ncy.url().should('include', '/dashboard');\n// Navigate to Admin section\ncy.get('.oxd-sidepanel').contains('Admin').click();\ncy.url().should('include', '/admin/viewSystemUsers');\n// Navigate to PIM\ncy.get('.oxd-sidepanel').contains('PIM').click();\ncy.url().should('include', '/pim/viewEmployeeList');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\n/web/index.php/auth/login\n\nWe failed looking for this file at the path:\n\n/Cypress-Testing/web/index.php/auth/login\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\n/web/index.php/auth/login\n\nWe failed looking for this file at the path:\n\n/Cypress-Testing/web/index.php/auth/login\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found\n    at <unknown> (http://localhost:53390/__cypress/runner/cypress_runner.js:134982:76)\n    at visitFailedByErr (http://localhost:53390/__cypress/runner/cypress_runner.js:134552:12)\n    at <unknown> (http://localhost:53390/__cypress/runner/cypress_runner.js:134965:13)\n    at tryCatcher (http://localhost:53390/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (http://localhost:53390/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (http://localhost:53390/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (http://localhost:53390/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (http://localhost:53390/__cypress/runner/cypress_runner.js:1667:18)\n    at _drainQueueStep (http://localhost:53390/__cypress/runner/cypress_runner.js:2377:12)\n    at _drainQueue (http://localhost:53390/__cypress/runner/cypress_runner.js:2370:9)\n    at Async._drainQueues (http://localhost:53390/__cypress/runner/cypress_runner.js:2386:5)\n    at Async.drainQueues (http://localhost:53390/__cypress/runner/cypress_runner.js:2256:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://cypress-testing/./cypress/e2e/OrangeHRM_Screenshot.cy.js:4:3)",
+                "diff": null
+              },
+              "uuid": "2b6e59cc-eb45-4a8c-9a4d-554d66aa7bca",
+              "parentUUID": "00543636-e2f3-4c72-8330-a8eb7de3bede",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "2b6e59cc-eb45-4a8c-9a4d-554d66aa7bca"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 402,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true,
+        "reportPageTitle": "OrangeHRM Test Report",
+        "inlineAssets": true
+      },
+      "version": "6.3.0"
+    }
+  }
+}
